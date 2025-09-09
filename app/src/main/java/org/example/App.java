@@ -1,15 +1,17 @@
 package org.example;
 
-import java.util.Scanner
+import java.util.Scanner;
 
 public class App {
   private Scanner userInput = new Scanner(System.in);//scanner for the user inputs
   
   public static void main(String[] args) {
-int userValue = getInput(1, 100, "Please enter a number between 1 and 100:", "that was not a valid input, try again,");//first initial call of get input 
+    App app = new App(); // Create an instance of the App class
+    
+    int userValue = app.getInput(1, 100, "Please enter a number between 1 and 100:", "that was not a valid input, try again,");//first initial call of get input 
     System.out.println("You have inputed: " + userValue);//outputs the inputed value if it is correct
 
-    userValue = getInput(1, 12, "Please enter a number between 1 and 12:", "that was not a valid input, try again,"); //second call of get input
+    userValue = app.getInput(1, 12, "Please enter a number between 1 and 12:", "that was not a valid input, try again,"); //second call of get input
     System.out.println("You have inputed: " + userValue); //outputs the inputed value if it is correct
   }
 
